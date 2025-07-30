@@ -1,89 +1,131 @@
-Sobre o Projeto
+# Catálogo de Produtos - Aplicação Web Completa (.NET + React)
+
+![Licença](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Uma aplicação web Full Stack construída com .NET e React que implementa um CRUD completo de produtos, com um sistema robusto de registro e autenticação de usuários via JWT (JSON Web Tokens).
+
+---
+
+## 📋 Tabela de Conteúdos
+
+1.  [Sobre o Projeto](#-sobre-o-projeto)
+    - [Funcionalidades](#-funcionalidades)
+    - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+2.  [Começando](#-começando)
+    - [Pré-requisitos](#-pré-requisitos)
+    - [Instalação e Execução](#-instalação-e-execução)
+3.  [Endpoints da API](#-endpoints-da-api)
+4.  [Licença](#-licença)
+
+---
+
+## 🚀 Sobre o Projeto
+
 Este projeto foi desenvolvido como uma demonstração completa de uma aplicação web moderna, seguindo as melhores práticas de desenvolvimento tanto no back-end quanto no front-end. Ele serve como um excelente template para projetos que necessitam de gerenciamento de dados e controle de acesso de usuários.
-Funcionalidades
-CRUD de Produtos: Funcionalidades completas para Criar, Ler, Atualizar e Deletar produtos.
-Filtro Dinâmico: Pesquisa de produtos por nome e/ou categoria diretamente pela API.
-Sistema de Usuários: Registro e Login de usuários.
-Autenticação Segura: Implementação de autenticação via JSON Web Tokens (JWT), com senhas armazenadas de forma segura usando Hash e Salt.
-Endpoints Protegidos: Apenas usuários autenticados podem adicionar, editar ou excluir produtos.
-Interface Reativa: Front-end responsivo e elegante, construído com React e estilizado com CSS Modules.
-Tecnologias Utilizadas
+
+### ✨ Funcionalidades
+
+-   **CRUD de Produtos:** Funcionalidades completas para Criar, Ler, Atualizar e Deletar produtos.
+-   **Filtro Dinâmico:** Pesquisa de produtos por nome e/ou categoria diretamente pela API.
+-   **Sistema de Usuários:** Registro e Login de usuários.
+-   **Autenticação Segura:** Implementação de autenticação via JSON Web Tokens (JWT), com senhas armazenadas de forma segura usando Hash e Salt.
+-   **Endpoints Protegidos:** Apenas usuários autenticados podem adicionar, editar ou excluir produtos.
+-   **Interface Reativa:** Front-end responsivo e elegante, construído com React e estilizado com CSS Modules.
+
+### 🛠️ Tecnologias Utilizadas
+
 A aplicação é dividida em duas partes principais:
-Back-end
-.NET 8 (compatível com .NET 6+)
-C#
-API REST com [ApiController]
-Entity Framework Core como ORM
-Microsoft.AspNetCore.Authentication.JwtBearer para autenticação JWT
-Front-end
-React (com TypeScript)
-React Router para roteamento
-Axios para requisições HTTP
-CSS Modules para estilização com escopo
-Banco de Dados
-SQL Server (pode ser facilmente adaptado para SQLite)
- Começando
+
+#### **Back-end**
+
+-   **.NET 8** (compatível com .NET 6+)
+-   **C#**
+-   **API REST** com `[ApiController]`
+-   **Entity Framework Core** como ORM
+-   **Microsoft.AspNetCore.Authentication.JwtBearer** para autenticação JWT
+
+#### **Front-end**
+
+-   **React** (com TypeScript)
+-   **React Router** para roteamento
+-   **Axios** para requisições HTTP
+-   **CSS Modules** para estilização com escopo
+
+#### **Banco de Dados**
+
+-   **SQL Server** (pode ser facilmente adaptado para **SQLite**)
+
+---
+
+## 🏁 Começando
+
 Siga estas instruções para obter uma cópia do projeto e executá-lo em sua máquina local para desenvolvimento e testes.
-Pré-requisitos
+
+### ✅ Pré-requisitos
+
 Antes de começar, garanta que você tem as seguintes ferramentas instaladas:
-.NET SDK 8.0 ou superior
-Generated sh
-dotnet --version
-Use code with caution.
-Sh
-Node.js e npm (v18.x ou superior recomendado)
-Generated sh
-node -v
-npm -v
-Use code with caution.
-Sh
-SQL Server (Express, Developer ou LocalDB)
-Um editor de código como o Visual Studio Code
-Ferramentas do EF Core (se não tiver instalado globalmente):
-Generated sh
-dotnet tool install --global dotnet-ef
-Use code with caution.
-Sh
-Instalação e Execução
-1. Configurando o Back-end
-Generated bash
+
+-   **.NET SDK 8.0** ou superior
+    ```sh
+    dotnet --version
+    ```
+-   **Node.js e npm** (v18.x ou superior recomendado)
+    ```sh
+    node -v
+    npm -v
+    ```
+-   **SQL Server** (Express, Developer ou LocalDB)
+-   **Um editor de código** como o Visual Studio Code
+
+-   **Ferramentas do EF Core** (se não tiver instalado globalmente):
+    ```sh
+    dotnet tool install --global dotnet-ef
+    ```
+
+### 🔧 Instalação e Execução
+
+#### **1. Configurando o Back-end**
+
+```bash
 # 1. Clone o repositório
-git clone https://github.com/ThynanP/ProductCatalog
+git clone https://github.com/ThynanP/ProductCatalog.git
 
 # 2. Navegue para a pasta do back-end
-cd caminho/do/projeto/Backend/ProductCatalog.Api
+cd ProductCatalog/Backend/ProductCatalog.Api
 
 # 3. Configure a conexão com o banco e o token JWT
 #    Abra o arquivo `appsettings.json` e altere os seguintes valores:
 Use code with caution.
-Bash
-appsettings.json```json
+Markdown
+appsettings.json
+Generated json
 {
-"AppSettings": {
-"Token": "esta é a minha chave secreta super longa e segura para gerar tokens"
-},
-"ConnectionStrings": {
-"DefaultConnection": "Server=NOME_DO_SEU_SERVIDOR;Database=ProductCatalogDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  "AppSettings": {
+    "Token": "esta é a minha chave secreta super longa e segura para gerar tokens"
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=NOME_DO_SEU_SERVIDOR;Database=ProductCatalogDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
 }
-// ...
-}
-Generated code
-```bash
+Use code with caution.
+Json
+Generated bash
 # 4. Restaure os pacotes NuGet
 dotnet restore
 
 # 5. Crie o banco de dados e aplique as migrations
-#    (Certifique-se de ter criado o banco "ProductCatalogDb" no seu SQL Server)
+#    (Certifique-se de ter criado um banco "ProductCatalogDb" no seu SQL Server)
 dotnet ef database update
 
 # 6. Execute a API
 dotnet run
 Use code with caution.
-✨ A API estará rodando, geralmente em http://localhost:5xxx. Anote a porta.
+Bash
+✨ A API estará rodando, geralmente em http://localhost:5xxx ou https://localhost:7xxx. Anote a porta HTTP.
 2. Configurando o Front-end
 Generated bash
 # 1. Em um novo terminal, navegue para a pasta do front-end
-cd caminho/do/projeto/Frontend/product-catalog-web
+cd ProductCatalog/Frontend/product-catalog-web
 
 # 2. Instale as dependências do npm
 npm install
@@ -97,16 +139,15 @@ src/services/api.ts
 Generated typescript
 const api = axios.create({
   baseURL: 'http://localhost:5287/api', // <-- Verifique esta porta!
-});
-Use code with caution.
-TypeScript
-Generated bash
+});```
+
+```bash
 # 4. Execute a aplicação React
 npm start
 Use code with caution.
-Bash
-A aplicação web estará acessível em http://localhost:3000.
-Endpoints da API
+TypeScript
+🚀 A aplicação web estará acessível em http://localhost:3000.
+🗺️ Endpoints da API
 Abaixo está uma lista dos principais endpoints disponíveis.
 Método	Endpoint	Descrição	Protegido
 POST	/api/users/register	Registra um novo usuário.	Não
