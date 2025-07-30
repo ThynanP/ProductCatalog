@@ -1,0 +1,148 @@
+
+.homeContainer {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: #212529;
+}
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.filterForm {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.filterInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.filterButton,
+.clearButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filterButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.clearButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.productList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.productItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.productItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.productInfo p {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.productInfo .price {
+  font-weight: bold;
+  color: #000;
+}
+
+.productInfo .category {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.actions button:hover {
+  background-color: #f0f0f0;
+}
+
+.actions .deleteButton {
+  border-color: #c9302c;
+  color: #c9302c;
+}
+
+.actions .deleteButton:hover {
+  background-color: #c9302c;
+  color: white;
+}
+
+.actions a {
+  margin-right: 0.5rem;
+}
+
+.noProductsMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
