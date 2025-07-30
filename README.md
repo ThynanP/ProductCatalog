@@ -48,7 +48,7 @@ Instalação e Execução
 1. Configurando o Back-end
 Generated bash
 # 1. Clone o repositório
-git clone https://seu-repositorio-aqui.git
+git clone https://github.com/ThynanP/ProductCatalog
 
 # 2. Navegue para a pasta do back-end
 cd caminho/do/projeto/Backend/ProductCatalog.Api
